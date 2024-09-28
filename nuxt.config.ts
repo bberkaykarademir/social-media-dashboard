@@ -2,10 +2,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
-  // routeRules: {
-  //   "/": { ssr: false },
-  //   "/authenticatedUser": { ssr: false },
-  // },
   css: ["~/assets/css/main.css"],
   nitro: {
     awsAmplify: {
@@ -20,8 +16,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxt/image", "@nuxtjs/tailwindcss", "@nuxt/icon"],
-
+  modules: ["@nuxt/image", "@nuxtjs/tailwindcss", "@nuxt/icon", "@pinia/nuxt"],
+  pinia: {
+    storesDirs: ["./stores/**", "./custom-folder/stores/**"],
+  },
   app: {
     head: {
       htmlAttrs: {
