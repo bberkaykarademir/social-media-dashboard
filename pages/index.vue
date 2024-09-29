@@ -11,41 +11,8 @@
         "
       />
     </div>
-    <div
-      class="hidden 2xl:flex justify-between 2xl:overflow-hidden flex-col-reverse 2xl:flex-row gap-7 2xl:gap-4"
-    >
-      <BarChart
-        v-if="
-          postsStore.postsResponse?.results?.length > 0 &&
-          !postsStore.postsLoading
-        "
-      />
-      <PostList />
-      <DoughnutChart
-        v-if="
-          postsStore.postsResponse?.results?.length > 0 &&
-          !postsStore.postsLoading
-        "
-      />
-    </div>
-    <div
-      class="flex 2xl:hidden justify-between 2xl:overflow-hidden flex-col 2xl:flex-row gap-7 2xl:gap-4"
-    >
-      <div class="flex flex-col md:flex-row gap-4 md:gap-10">
-        <BarChart
-          v-if="
-            postsStore.postsResponse?.results?.length > 0 &&
-            !postsStore.postsLoading
-          "
-        /><DoughnutChart
-          v-if="
-            postsStore.postsResponse?.results?.length > 0 &&
-            !postsStore.postsLoading
-          "
-        />
-      </div>
-      <PostList />
-    </div>
+    <DashboardLargeScreen />
+    <DashboardSmallScreen />
   </main>
 </template>
 
