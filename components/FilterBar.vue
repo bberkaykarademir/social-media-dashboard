@@ -1,6 +1,8 @@
 <template>
-  <div class="flex justify-between items-center w-1/2 mx-auto">
-    <div class="flex items-center justify-center gap-5">
+  <div
+    class="flex flex-col w-full md:w-fit md:flex-row gap-4 md:gap-10 2xl:gap-0 justify-between items-center 2xl:w-1/2 mx-auto text-sm md:text-base"
+  >
+    <div class="flex flex-col w-full md:w-fit md:flex-row md:items-center justify-center gap-3 md:gap-5">
       <select
         v-model="postsStore.filters.sortBy"
         class="bg-gray-900 text-white rounded-lg py-2 px-3 flex"
@@ -14,20 +16,19 @@
         </option>
       </select>
 
-      <div class="flex gap-3">
+      <div class="flex flex-col md:flex-row w-full md:w-fit gap-3">
         <input
           v-model="postsStore.filters.startDate"
           type="date"
-          class="bg-gray-900 text-white rounded-lg py-2 px-3 text-center flex"
-          placeholder="Search"
+          class="bg-gray-900 text-white min-w-[96%] sm:min-w-fit rounded-lg py-2 px-1 md:px-3 text-center flex w-full"
         />
 
         <input
           v-model="postsStore.filters.endDate"
           type="date"
-          class="bg-gray-900 text-white rounded-lg py-2 px-3 text-center flex"
-          placeholder="Search"
+          class="bg-gray-900 text-white min-w-[96%] sm:min-w-fit rounded-lg py-2 px-1 md:px-3 text-center flex w-full"
         />
+        
       </div>
 
       <select

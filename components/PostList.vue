@@ -1,9 +1,11 @@
 <template>
-  <div class="flex flex-col flex-grow gap-6 overflow-y-auto">
+  <div
+    class="flex flex-col flex-grow gap-6 overflow-y-auto max-w-[900px] mx-auto h-[600px] 2xl:h-full"
+  >
     <div
       v-if="postsStore.postsLoading"
-        v-for="index in 2"
-      class="postSkeleton flex-shrink-0 h-44 w-[650px] mx-auto"
+      v-for="index in 2"
+      class="postSkeleton flex-shrink-0 h-44 w-[350px] sm:w-[650px] mx-auto"
     ></div>
     <div
       v-else
@@ -14,14 +16,22 @@
       <div class="flex flex-col gap-2">
         <div class="flex justify-between items-center">
           <div class="flex gap-3 items-center">
-            <div class="bg-[#d9d9d9] rounded-full w-8 h-8"></div>
-            <span>{{ postData.user.username }}</span>
+            <div class="bg-[#d9d9d9] rounded-full w-7 sm:w-8 h-7 sm:h-8">
+              <NuxtImg
+                :src="postData.user.profile_pic_url"
+                alt="profile image"
+                class="rounded-full w-full h-full"
+              />
+            </div>
+            <span class="text-sm sm:text-base">{{
+              postData.user.username
+            }}</span>
           </div>
           <span class="text-xs text-gray-300">{{
             parseDateResponse(postData.creation_date)
           }}</span>
         </div>
-        <p class="text-sm">
+        <p class="text-xs sm:text-sm">
           {{ postData.text }}
         </p>
       </div>
@@ -47,7 +57,10 @@
       </div>
     </div>
     <p
-      v-if="postsStore.postsResponse?.results?.length === 0 && !postsStore.postsLoading"
+      v-if="
+        postsStore.postsResponse?.results?.length === 0 &&
+        !postsStore.postsLoading
+      "
       class="text-center text-white"
     >
       No posts found

@@ -61,6 +61,7 @@ export const usePostsStore = defineStore({
         return this.postsResponse;
       } catch (error) {
         console.error("Error fetching posts:", error);
+        this.postsResponse = { results: [], continuation_token: "" };
         throw error;
       } finally {
         this.postsLoading = false;
@@ -99,7 +100,6 @@ export const usePostsStore = defineStore({
           headers: {
             "x-rapidapi-key": config.public.rapidApiKey as string,
             "x-rapidapi-host": config.public.rapidApiHost as string,
-            "X-RapidAPI-Mock-Response": config.public.rapidApiMockResponse,
             Accept: "application/json, text/plain, */*",
           },
           retry: 0,

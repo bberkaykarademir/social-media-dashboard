@@ -56,6 +56,10 @@
     -webkit-appearance: none;
   }
 
+  input::-webkit-date-and-time-value {
+    text-align: left;
+  }
+
   .postSkeleton {
     background-color: #333;
     background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc),

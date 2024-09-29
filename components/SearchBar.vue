@@ -11,7 +11,7 @@
     <input
       type="text"
       placeholder="Search hashtag or keyword"
-      class="w-full h-16 text-2xl py-2 ml-2"
+      class="w-full h-12 lg:h-16 text-lg lg:text-2xl py-2 ml-2"
       v-model="postsStore.filters.query"
     />
     <button
@@ -19,7 +19,7 @@
       class="bg-transparent"
       :disabled="postsStore.filters.query.trim().length < 3"
     >
-      <Icon class="w-7 h-7 mt-2" name="material-symbols:search" />
+      <Icon class="w-5 lg:w-7 h-5 lg:h-7 mt-2" name="material-symbols:search" />
     </button>
   </form>
 </template>

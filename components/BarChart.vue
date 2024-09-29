@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center py-2 bg-gray-900 flex-shrink-0 rounded-2xl w-[400px] h-[250px]">
-    <canvas ref="barChart" width="400" height="250"></canvas>
+  <div class="flex justify-center items-center mx-auto py-2 bg-gray-900 flex-shrink-0 rounded-2xl w-full md:w-[350px] lg:w-[400px] h-[220px] lg:h-[250px]">
+    <canvas ref="barChart" ></canvas>
   </div>
 </template>
 

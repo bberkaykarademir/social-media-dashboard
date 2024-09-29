@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex justify-center py-2 bg-gray-900 flex-shrink-0 rounded-2xl w-[400px] h-[250px]"
+    class="flex justify-center items-center mx-auto py-2 bg-gray-900 flex-shrink-0 rounded-2xl w-full md:w-[350px] lg:w-[400px] h-[220px] lg:h-[250px]"
   >
-    <canvas ref="doughnutChart" width="400" height="250"></canvas>
+    <canvas ref="doughnutChart"></canvas>
   </div>
 </template>
 
@@ -44,6 +44,10 @@ const createChart = () => {
           data: [twitterPostsCount.value, linkedinPostsCount.value],
         },
       ],
+    },
+    options: {
+      responsive: true, // bu ayar varsayılan olarak true olmalıdır
+      maintainAspectRatio: false, // bu ayar, öğenin boyutunu değiştirebilmek için false olmalı
     },
   });
 };

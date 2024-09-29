@@ -4,12 +4,12 @@
       <NuxtImg
         src="https://www.dedecta.com/assets/logoblue.svg"
         alt="Dedecta Logo"
-        class="flex-shrink-0 w-32"
+        class="flex-shrink-0 w-28 sm:w-32"
       />
       <NuxtLink
         to="https://www.dedecta.com/"
         target="_blank"
-        class="bg-primary flex items-center gap-3 h-fit my-auto py-2 px-4 rounded-lg font-semibold text-sm"
+        class="bg-primary flex items-center gap-3 h-fit my-auto py-2 px-2 sm:px-4 rounded-lg font-semibold text-xs sm:text-sm"
       >
         <span>Explore Other Services</span>
         <Icon name="material-symbols:arrow-right-alt" class="w-5 h-5" />
