@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900 flex-shrink-0 rounded-2xl w-[400px] h-[250px]">
+  <div class="flex justify-center py-2 bg-gray-900 flex-shrink-0 rounded-2xl w-[400px] h-[250px]">
     <canvas ref="barChart" width="400" height="250"></canvas>
   </div>
 </template>
