@@ -37,5 +37,12 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
     },
   },
+  runtimeConfig: {
+    public: {
+      rapidApiKey: process.env.RAPIDAPI_KEY,
+      rapidApiHost: process.env.RAPIDAPI_HOST,
+      rapidApiMockResponse: process.env.RAPIDAPI_MOCK_RESPONSE,
+    },
+  },
   compatibilityDate: "2024-04-03",
 });

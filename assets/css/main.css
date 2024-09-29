@@ -7,6 +7,10 @@
   body {
     @apply h-full w-full font-segoe;
   }
+
+  * {
+    @apply focus:outline focus:outline-1 focus:outline-primary;
+  }
 }
 
 @layer components {
@@ -44,5 +48,42 @@
 
   .loader {
     @apply border-2 border-transparent rounded-full w-5 h-5 border-t-2 border-t-white animate-spin;
+  }
+
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+  .postSkeleton {
+    background-color: #333;
+    background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc),
+      linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc),
+      linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc),
+      linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc),
+      linear-gradient(#ccc, #ccc);
+
+    background-repeat: no-repeat;
+    background-position: 12px 12px, 50px 16px, 92% 16px, 12px 50px, 12px 75px,
+      12px 100px, 12px 140px, 50px 140px, 90px 140px;
+
+    background-size: 32px 32px, 120px 16px, 60px 14px, 90% 12px, 85% 12px,
+      80% 12px, 16px 16px, 16px 16px, 16px 16px;
+
+    border-radius: 8px;
+    animation: skeleton 1s infinite ease-in-out;
+  }
+
+  @keyframes skeleton {
+    0% {
+      background-color: #222;
+    }
+    50% {
+      background-color: #333;
+    }
+    100% {
+      background-color: #222;
+    }
   }
 }
